@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2027
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyMediaCollection", "MyMediaCollection\MyMediaCollection.csproj", "{C337654D-AA31-4370-ABA2-D49837CAE2D3}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "MyMediaCollectionDb", "MyMediaCollectionDb\MyMediaCollectionDb.sqlproj", "{84A18E76-DBDD-4D7A-8F17-F6FE1B829E02}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C337654D-AA31-4370-ABA2-D49837CAE2D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C337654D-AA31-4370-ABA2-D49837CAE2D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C337654D-AA31-4370-ABA2-D49837CAE2D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C337654D-AA31-4370-ABA2-D49837CAE2D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{84A18E76-DBDD-4D7A-8F17-F6FE1B829E02}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84A18E76-DBDD-4D7A-8F17-F6FE1B829E02}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84A18E76-DBDD-4D7A-8F17-F6FE1B829E02}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{84A18E76-DBDD-4D7A-8F17-F6FE1B829E02}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84A18E76-DBDD-4D7A-8F17-F6FE1B829E02}.Release|Any CPU.Build.0 = Release|Any CPU
+		{84A18E76-DBDD-4D7A-8F17-F6FE1B829E02}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D223EE7F-B241-44C9-92C7-13457E27290F}
+	EndGlobalSection
+EndGlobal

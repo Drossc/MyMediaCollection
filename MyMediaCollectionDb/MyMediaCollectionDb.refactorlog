@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Operations Version="1.0" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+  <Operation Name="Rename Refactor" Key="52e4959f-81c4-40c1-bc03-5e55ee49e117" ChangeDateTime="04/05/2018 02:29:11">
+    <Property Name="ElementName" Value="[dbo].[VGTable].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[VGTable]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="UPC" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="83fef33c-94a8-4af2-be8b-4bcdb3762bff" ChangeDateTime="04/05/2018 02:32:28">
+    <Property Name="ElementName" Value="[dbo].[VGTable].[RETAILAMOUNT]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[VGTable]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="RETAILAMT" />
+  </Operation>
+</Operations>
