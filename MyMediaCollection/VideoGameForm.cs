@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace MyMediaCollection
 {
@@ -35,8 +36,21 @@ namespace MyMediaCollection
             string vgPurchLoc = TbPurchLoc?.Text;
             string vgRetailAmt = TbRetailAmt?.Text;
             string vgDiscount = TbDiscount?.Text;
-            //Todo Connect to DB
+
+            StringBuilder sb = new StringBuilder();
+            sb.Append ("INSERT [UPC,TITLE,DESCRIPTION,RELEASEDATE,PLATFORM,PURHCASEDATE,PURCHASEAMT,");
+            sb.Append("PURCHASELOCATION,RETAILAMT,DISCOUNT,DATEADDED,ADDEDBY] VALUES (");
+            sb.Append(vgUPC + "," + vgTitle + "," + vgDescription + "," + vgReleaseDate + "," + vgPlatform + "," + vgPurchDate + ",");
+            sb.Append(vgPurchAmt + "," + vgPurchLoc + "," + vgRetailAmt + "," + vgDiscount + ")");
+
             //Todo Insert Values to VGTable
+            string connectionString = Utility.GetConnectionString();
+            SqlConnection connection = new SqlConnection(connectionString);
+            connection.Open();
+            SqlCommand command = new SqlCommand();
+            command.ExecuteNonQuery();
+            connection.Close();
+
             //Todo Notify User of Completion/Error
         }
 
