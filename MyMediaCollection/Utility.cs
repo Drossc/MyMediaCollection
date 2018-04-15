@@ -13,7 +13,7 @@ namespace MyMediaCollection
         {
             string returnString = null;
 
-            ConnectionStringSettings settings = ConfigurationManager.ConnectionStrings[""];
+            ConnectionStringSettings settings = ConfigurationManager.ConnectionStrings["MyMediaCollection.Properties.Settings.connString"];
 
             if (settings != null)
                 returnString = settings.ConnectionString;

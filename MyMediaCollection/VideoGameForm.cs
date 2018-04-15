@@ -1,13 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.SqlClient;
 
 namespace MyMediaCollection
 {
@@ -25,33 +23,30 @@ namespace MyMediaCollection
 
         private void BtnAdd_Click(object sender, EventArgs e)
         {
-            //ToDo Pull in Values Variable
-            string vgTitle = TbTitle?.Text;
-            string vgUPC = TbUPC?.Text;
-            string vgDescription = TbDescription?.Text;
-            string vgReleaseDate = TbReleaseDate?.Text;
-            string vgPlatform = TbPlatform?.Text;
-            string vgPurchDate = TbPurchDate?.Text;
-            string vgPurchAmt = TbPurchAmt?.Text;
-            string vgPurchLoc = TbPurchLoc?.Text;
-            string vgRetailAmt = TbRetailAmt?.Text;
-            string vgDiscount = TbDiscount?.Text;
+            //Todo need to add in date added to database
+            //Todo need to add in person entering the information
+            VideoGame game = new VideoGame
+            {
+                Title = TbTitle?.Text,
+                UPC = TbUPC?.Text,
+                Description = TbDescription?.Text,
+                ReleaseDate = TbReleaseDate?.Text,
+                Platform = TbPlatform?.Text,
+                PurchDate = TbPurchDate?.Text,
+                PurchAmt = TbPurchAmt?.Text,
+                PurchLoc = TbPurchLoc?.Text,
+                RetailAmt = TbRetailAmt?.Text,
+                Discount = TbDiscount?.Text
+            };
 
             StringBuilder sb = new StringBuilder();
-            sb.Append ("INSERT [UPC,TITLE,DESCRIPTION,RELEASEDATE,PLATFORM,PURHCASEDATE,PURCHASEAMT,");
-            sb.Append("PURCHASELOCATION,RETAILAMT,DISCOUNT,DATEADDED,ADDEDBY] VALUES (");
-            sb.Append(vgUPC + "," + vgTitle + "," + vgDescription + "," + vgReleaseDate + "," + vgPlatform + "," + vgPurchDate + ",");
-            sb.Append(vgPurchAmt + "," + vgPurchLoc + "," + vgRetailAmt + "," + vgDiscount + ")");
+            sb.Append ("INSERT VGTable (UPC,TITLE,DESCRIPTION,RELEASEDATE,PLATFORM,PURCHASEDATE,PURCHASEAMT,");
+            sb.Append("PURCHASELOCATION,RETAILAMT,DISCOUNT) VALUES ('");
+            sb.Append(game.UPC + "','" + game.Title + "','" + game.Description + "','" + game.ReleaseDate + "','" + game.Platform);
+            sb.Append("','" + game.PurchDate + "','" + game.PurchAmt + "','" + game.PurchLoc + "','" + game.RetailAmt + "','");
+            sb.Append(game.Discount + "')");
 
-            //Todo Insert Values to VGTable
-            string connectionString = Utility.GetConnectionString();
-            SqlConnection connection = new SqlConnection(connectionString);
-            connection.Open();
-            SqlCommand command = new SqlCommand();
-            command.ExecuteNonQuery();
-            connection.Close();
-
-            //Todo Notify User of Completion/Error
+            game.AddGame(sb.ToString());
         }
 
         private void BtnSearch_Click(object sender, EventArgs e)

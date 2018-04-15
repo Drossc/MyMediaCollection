@@ -26,11 +26,12 @@ namespace MyMediaCollection.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("C:\\Users\\dross\\AppData\\Local\\Microsoft\\VisualStudio\\SSDT\\MyMediaCollection\\MyMedi" +
-            "aCollectionDb.mdf")]
-        public string ConnectionString {
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(localdb)\\ProjectsV13;Initial Catalog=MyMediaCollectionDb;Integrated " +
+            "Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;Appl" +
+            "icationIntent=ReadWrite;MultiSubnetFailover=False")]
+        public string connString {
             get {
-                return ((string)(this["ConnectionString"]));
+                return ((string)(this["connString"]));
             }
         }
     }

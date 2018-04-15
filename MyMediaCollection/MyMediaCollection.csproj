@@ -72,6 +72,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utility.cs" />
+    <Compile Include="VideoGame.cs" />
     <Compile Include="VideoGameForm.cs">
       <SubType>Form</SubType>
     </Compile>
