@@ -46,7 +46,7 @@ namespace MyMediaCollection
             sb.Append("','" + game.PurchDate + "','" + game.PurchAmt + "','" + game.PurchLoc + "','" + game.RetailAmt + "','");
             sb.Append(game.Discount + "')");
 
-            game.AddGame(sb.ToString());
+            tSSLable.Text = game.AddGame(sb.ToString());
         }
 
         private void BtnSearch_Click(object sender, EventArgs e)
@@ -58,5 +58,7 @@ namespace MyMediaCollection
         {
             //ToDo Remove an Existing Video Game from the DB
         }
+
+        //ToDo Need to be able to clear out form fields after performing an event
     }
 }

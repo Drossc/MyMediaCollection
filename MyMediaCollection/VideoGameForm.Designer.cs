@@ -55,15 +55,19 @@
             this.TbPurchLoc = new System.Windows.Forms.TextBox();
             this.TbRetailAmt = new System.Windows.Forms.TextBox();
             this.TbDiscount = new System.Windows.Forms.TextBox();
+            this.tSSLable = new System.Windows.Forms.ToolStripStatusLabel();
+            this.StatusStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // StatusStrip
             // 
             this.StatusStrip.BackColor = System.Drawing.Color.White;
             this.StatusStrip.ImageScalingSize = new System.Drawing.Size(24, 24);
-            this.StatusStrip.Location = new System.Drawing.Point(0, 422);
+            this.StatusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tSSLable});
+            this.StatusStrip.Location = new System.Drawing.Point(0, 416);
             this.StatusStrip.Name = "StatusStrip";
-            this.StatusStrip.Size = new System.Drawing.Size(801, 22);
+            this.StatusStrip.Size = new System.Drawing.Size(801, 28);
             this.StatusStrip.TabIndex = 0;
             // 
             // LblTitle
@@ -286,6 +290,11 @@
             this.TbDiscount.Size = new System.Drawing.Size(474, 26);
             this.TbDiscount.TabIndex = 26;
             // 
+            // tSSLable
+            // 
+            this.tSSLable.Name = "tSSLable";
+            this.tSSLable.Size = new System.Drawing.Size(0, 23);
+            // 
             // VideoGameForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -321,6 +330,8 @@
             this.Controls.Add(this.StatusStrip);
             this.Name = "VideoGameForm";
             this.Text = "Video Games";
+            this.StatusStrip.ResumeLayout(false);
+            this.StatusStrip.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -355,5 +366,6 @@
         private System.Windows.Forms.TextBox TbPurchLoc;
         private System.Windows.Forms.TextBox TbRetailAmt;
         private System.Windows.Forms.TextBox TbDiscount;
+        private System.Windows.Forms.ToolStripStatusLabel tSSLable;
     }
 }

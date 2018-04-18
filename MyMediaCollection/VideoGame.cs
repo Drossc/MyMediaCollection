@@ -51,23 +51,51 @@ namespace MyMediaCollection
         /// </summary>
         public string Discount;
 
-        internal void AddGame(string cmdText)
+        /// <summary>
+        /// Adds game to database while returning status message.
+        /// </summary>
+        /// <param name="cmdText"></param>
+        /// <returns></returns>
+        public string AddGame(string cmdText)
         {
+            string statusMsg = null;
             string connectionString = Utility.GetConnectionString();
             
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
-
                 SqlCommand cmdNewGame = new SqlCommand();
                 cmdNewGame.CommandType = CommandType.Text;
                 cmdNewGame.CommandText = cmdText;
                 cmdNewGame.Connection = connection;
-                connection.Open();
-                cmdNewGame.ExecuteNonQuery();
-                connection.Close();
-                //Todo Add Notification to Status Bar to indicate game was added
+
+                switch (connection.State)
+                {
+                    case ConnectionState.Closed:
+                        connection.Open();
+                        cmdNewGame.ExecuteNonQuery();
+                        connection.Close();
+                        statusMsg = Convert.ToString(DateTime.Now) + " Game Added Successfully!";
+                        break;
+                    case ConnectionState.Open:
+                        cmdNewGame.ExecuteNonQuery();
+                        connection.Close();
+                        statusMsg = Convert.ToString(DateTime.Now) + " Game Added Successfully!";
+                        break;
+                    case ConnectionState.Connecting:
+                        statusMsg = Convert.ToString(DateTime.Now) + " Still Connecting, Addition Failed.";
+                        break;
+                    case ConnectionState.Executing:
+                        statusMsg = Convert.ToString(DateTime.Now) + " Still Executing!";
+                        break;
+                    case ConnectionState.Fetching:
+                        statusMsg = Convert.ToString(DateTime.Now) + " Still Fetching Results.";
+                        break;
+                    case ConnectionState.Broken:
+                        statusMsg = Convert.ToString(DateTime.Now) + " Game Not Added. Connection Broken.";
+                        break;
+                }
             }
-            //Todo Notify User of Completion/Error
+            return statusMsg;
         }
     }
 }
