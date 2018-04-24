@@ -30,15 +30,21 @@ namespace MyMediaCollection
                 Title = TbTitle?.Text,
                 UPC = TbUPC?.Text,
                 Description = TbDescription?.Text,
-                ReleaseDate = TbReleaseDate?.Text,
+                //ReleaseDate = TbReleaseDate?.Text,
+                ReleaseDate = DtpReleaseDate.Value,
                 Platform = TbPlatform?.Text,
-                PurchDate = TbPurchDate?.Text,
-                PurchAmt = TbPurchAmt?.Text,
+                //PurchDate = TbPurchDate?.Text,
+                PurchDate = DtpPurchDate.Value,
+                //PurchAmt = TbPurchAmt?.Text,
+                //This may not work but need to test to see if a decimal is recorded.
+                PurchAmt = Convert.ToDecimal(MtbPurchAmt?.Text),
                 PurchLoc = TbPurchLoc?.Text,
-                RetailAmt = TbRetailAmt?.Text,
+                //RetailAmt = TbRetailAmt?.Text,
+                RetailAmt = Convert.ToDecimal(MtbRetailAmt?.Text),
                 Discount = TbDiscount?.Text
             };
 
+            
             StringBuilder sb = new StringBuilder();
             sb.Append ("INSERT VGTable (UPC,TITLE,DESCRIPTION,RELEASEDATE,PLATFORM,PURCHASEDATE,PURCHASEAMT,");
             sb.Append("PURCHASELOCATION,RETAILAMT,DISCOUNT) VALUES ('");
@@ -57,6 +63,27 @@ namespace MyMediaCollection
         private void BtnRemove_Click(object sender, EventArgs e)
         {
             //ToDo Remove an Existing Video Game from the DB
+        }
+
+        private void TbReleaseDate_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LblPlatform_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TbDiscount_TextChanged(object sender, EventArgs e)
+        {
+            MessageBox.Show("Something Happened.");
+        }
+
+
+        private void MtbPurchAmt_TextChanged(object sender, EventArgs e)
+        {
+            TbDiscount.Text = Convert.ToString((Convert.ToDecimal(MtbPurchAmt.Text) / Convert.ToDecimal(MtbRetailAmt.Text)) * 100);
         }
 
         //ToDo Need to be able to clear out form fields after performing an event

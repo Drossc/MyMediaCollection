@@ -25,7 +25,7 @@ namespace MyMediaCollection
         /// <summary>
         /// Initial release date of the game.
         /// </summary>
-        public string ReleaseDate;
+        public DateTime ReleaseDate;
         /// <summary>
         /// Platform game was purchased on.
         /// </summary>
@@ -33,11 +33,11 @@ namespace MyMediaCollection
         /// <summary>
         /// Date game was purchased on.
         /// </summary>
-        public string PurchDate;
+        public DateTime PurchDate;
         /// <summary>
         /// Amount game was purchased for.
         /// </summary>
-        public string PurchAmt;
+        public decimal PurchAmt;
         /// <summary>
         /// Location purchase took place at.
         /// </summary>
@@ -45,7 +45,7 @@ namespace MyMediaCollection
         /// <summary>
         /// Original retail amount game released for.
         /// </summary>
-        public string RetailAmt;
+        public decimal RetailAmt;
         /// <summary>
         /// Difference between Retail Amount and Purchase Amount.
         /// </summary>
