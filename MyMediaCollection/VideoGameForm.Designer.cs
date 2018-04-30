@@ -68,7 +68,7 @@
             this.tSSLable});
             this.StatusStrip.Location = new System.Drawing.Point(0, 590);
             this.StatusStrip.Name = "StatusStrip";
-            this.StatusStrip.Size = new System.Drawing.Size(1375, 22);
+            this.StatusStrip.Size = new System.Drawing.Size(954, 22);
             this.StatusStrip.TabIndex = 0;
             // 
             // tSSLable
@@ -125,7 +125,7 @@
             // LblPurchDate
             // 
             this.LblPurchDate.AutoSize = true;
-            this.LblPurchDate.Location = new System.Drawing.Point(880, 332);
+            this.LblPurchDate.Location = new System.Drawing.Point(637, 178);
             this.LblPurchDate.Name = "LblPurchDate";
             this.LblPurchDate.Size = new System.Drawing.Size(119, 20);
             this.LblPurchDate.TabIndex = 6;
@@ -134,7 +134,7 @@
             // LblPurchAmt
             // 
             this.LblPurchAmt.AutoSize = true;
-            this.LblPurchAmt.Location = new System.Drawing.Point(880, 384);
+            this.LblPurchAmt.Location = new System.Drawing.Point(637, 230);
             this.LblPurchAmt.Name = "LblPurchAmt";
             this.LblPurchAmt.Size = new System.Drawing.Size(140, 20);
             this.LblPurchAmt.TabIndex = 7;
@@ -143,7 +143,7 @@
             // LblPurchLoc
             // 
             this.LblPurchLoc.AutoSize = true;
-            this.LblPurchLoc.Location = new System.Drawing.Point(880, 436);
+            this.LblPurchLoc.Location = new System.Drawing.Point(637, 282);
             this.LblPurchLoc.Name = "LblPurchLoc";
             this.LblPurchLoc.Size = new System.Drawing.Size(145, 20);
             this.LblPurchLoc.TabIndex = 8;
@@ -161,7 +161,7 @@
             // LblDiscount
             // 
             this.LblDiscount.AutoSize = true;
-            this.LblDiscount.Location = new System.Drawing.Point(880, 488);
+            this.LblDiscount.Location = new System.Drawing.Point(637, 334);
             this.LblDiscount.Name = "LblDiscount";
             this.LblDiscount.Size = new System.Drawing.Size(76, 20);
             this.LblDiscount.TabIndex = 10;
@@ -173,7 +173,7 @@
             this.BtnAdd.Location = new System.Drawing.Point(16, 504);
             this.BtnAdd.Name = "BtnAdd";
             this.BtnAdd.Size = new System.Drawing.Size(150, 50);
-            this.BtnAdd.TabIndex = 11;
+            this.BtnAdd.TabIndex = 12;
             this.BtnAdd.Text = "Add";
             this.BtnAdd.UseVisualStyleBackColor = false;
             this.BtnAdd.Click += new System.EventHandler(this.BtnAdd_Click);
@@ -184,7 +184,7 @@
             this.BtnExit.Location = new System.Drawing.Point(637, 504);
             this.BtnExit.Name = "BtnExit";
             this.BtnExit.Size = new System.Drawing.Size(150, 50);
-            this.BtnExit.TabIndex = 12;
+            this.BtnExit.TabIndex = 15;
             this.BtnExit.Text = "Exit";
             this.BtnExit.UseVisualStyleBackColor = false;
             this.BtnExit.Click += new System.EventHandler(this.BtnExit_Click);
@@ -196,7 +196,7 @@
             this.BtnRemove.Location = new System.Drawing.Point(328, 504);
             this.BtnRemove.Name = "BtnRemove";
             this.BtnRemove.Size = new System.Drawing.Size(150, 50);
-            this.BtnRemove.TabIndex = 13;
+            this.BtnRemove.TabIndex = 14;
             this.BtnRemove.Text = "Remove";
             this.BtnRemove.UseVisualStyleBackColor = false;
             this.BtnRemove.Click += new System.EventHandler(this.BtnRemove_Click);
@@ -207,7 +207,7 @@
             this.BtnSearch.Location = new System.Drawing.Point(637, 8);
             this.BtnSearch.Name = "BtnSearch";
             this.BtnSearch.Size = new System.Drawing.Size(150, 50);
-            this.BtnSearch.TabIndex = 0;
+            this.BtnSearch.TabIndex = 1;
             this.BtnSearch.Text = "Search";
             this.BtnSearch.UseVisualStyleBackColor = false;
             this.BtnSearch.Click += new System.EventHandler(this.BtnSearch_Click);
@@ -226,14 +226,14 @@
             this.TbSearch.Location = new System.Drawing.Point(157, 20);
             this.TbSearch.Name = "TbSearch";
             this.TbSearch.Size = new System.Drawing.Size(474, 26);
-            this.TbSearch.TabIndex = 16;
+            this.TbSearch.TabIndex = 0;
             // 
             // TbTitle
             // 
             this.TbTitle.Location = new System.Drawing.Point(157, 146);
             this.TbTitle.Name = "TbTitle";
             this.TbTitle.Size = new System.Drawing.Size(474, 26);
-            this.TbTitle.TabIndex = 17;
+            this.TbTitle.TabIndex = 3;
             this.TbTitle.Text = "Middle-Earth Shadow of Mordor";
             // 
             // TbUPC
@@ -241,7 +241,7 @@
             this.TbUPC.Location = new System.Drawing.Point(157, 94);
             this.TbUPC.Name = "TbUPC";
             this.TbUPC.Size = new System.Drawing.Size(474, 26);
-            this.TbUPC.TabIndex = 18;
+            this.TbUPC.TabIndex = 2;
             this.TbUPC.Text = "883929319572";
             // 
             // TbDescription
@@ -250,7 +250,7 @@
             this.TbDescription.Multiline = true;
             this.TbDescription.Name = "TbDescription";
             this.TbDescription.Size = new System.Drawing.Size(474, 90);
-            this.TbDescription.TabIndex = 19;
+            this.TbDescription.TabIndex = 4;
             this.TbDescription.Text = "An Entirely Fresh Open World Experience - Gamespot";
             // 
             // TbPlatform
@@ -258,24 +258,23 @@
             this.TbPlatform.Location = new System.Drawing.Point(157, 314);
             this.TbPlatform.Name = "TbPlatform";
             this.TbPlatform.Size = new System.Drawing.Size(474, 26);
-            this.TbPlatform.TabIndex = 21;
+            this.TbPlatform.TabIndex = 5;
             this.TbPlatform.Text = "Xbox One";
             // 
             // TbPurchLoc
             // 
-            this.TbPurchLoc.Location = new System.Drawing.Point(884, 459);
+            this.TbPurchLoc.Location = new System.Drawing.Point(641, 305);
             this.TbPurchLoc.Name = "TbPurchLoc";
             this.TbPurchLoc.Size = new System.Drawing.Size(150, 26);
-            this.TbPurchLoc.TabIndex = 24;
+            this.TbPurchLoc.TabIndex = 10;
             this.TbPurchLoc.Text = "Best Buy";
             // 
             // TbDiscount
             // 
-            this.TbDiscount.Location = new System.Drawing.Point(884, 504);
+            this.TbDiscount.Location = new System.Drawing.Point(641, 357);
             this.TbDiscount.Name = "TbDiscount";
             this.TbDiscount.Size = new System.Drawing.Size(150, 26);
-            this.TbDiscount.TabIndex = 26;
-            this.TbDiscount.TextChanged += new System.EventHandler(this.TbDiscount_TextChanged);
+            this.TbDiscount.TabIndex = 11;
             // 
             // BtnUpdate
             // 
@@ -284,7 +283,7 @@
             this.BtnUpdate.Location = new System.Drawing.Point(172, 504);
             this.BtnUpdate.Name = "BtnUpdate";
             this.BtnUpdate.Size = new System.Drawing.Size(150, 50);
-            this.BtnUpdate.TabIndex = 27;
+            this.BtnUpdate.TabIndex = 13;
             this.BtnUpdate.Text = "Update";
             this.BtnUpdate.UseVisualStyleBackColor = false;
             // 
@@ -295,27 +294,27 @@
             this.DtpReleaseDate.Location = new System.Drawing.Point(637, 94);
             this.DtpReleaseDate.Name = "DtpReleaseDate";
             this.DtpReleaseDate.Size = new System.Drawing.Size(150, 26);
-            this.DtpReleaseDate.TabIndex = 28;
+            this.DtpReleaseDate.TabIndex = 6;
             this.DtpReleaseDate.Value = new System.DateTime(2014, 9, 30, 0, 0, 0, 0);
             // 
             // DtpPurchDate
             // 
             this.DtpPurchDate.CustomFormat = "MM/dd/yyyy";
             this.DtpPurchDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.DtpPurchDate.Location = new System.Drawing.Point(884, 355);
+            this.DtpPurchDate.Location = new System.Drawing.Point(641, 201);
             this.DtpPurchDate.Name = "DtpPurchDate";
             this.DtpPurchDate.Size = new System.Drawing.Size(150, 26);
-            this.DtpPurchDate.TabIndex = 29;
+            this.DtpPurchDate.TabIndex = 8;
             this.DtpPurchDate.Value = new System.DateTime(2015, 9, 30, 0, 0, 0, 0);
             // 
             // MtbPurchAmt
             // 
-            this.MtbPurchAmt.Location = new System.Drawing.Point(884, 407);
+            this.MtbPurchAmt.Location = new System.Drawing.Point(641, 253);
             this.MtbPurchAmt.Mask = "$99.00";
             this.MtbPurchAmt.Name = "MtbPurchAmt";
             this.MtbPurchAmt.Size = new System.Drawing.Size(150, 26);
-            this.MtbPurchAmt.TabIndex = 30;
-            this.MtbPurchAmt.Text = "0000";
+            this.MtbPurchAmt.TabIndex = 9;
+            this.MtbPurchAmt.Leave += new System.EventHandler(this.MtbPurchAmt_Leave);
             // 
             // MtbRetailAmt
             // 
@@ -323,7 +322,7 @@
             this.MtbRetailAmt.Mask = "$99.00";
             this.MtbRetailAmt.Name = "MtbRetailAmt";
             this.MtbRetailAmt.Size = new System.Drawing.Size(150, 26);
-            this.MtbRetailAmt.TabIndex = 31;
+            this.MtbRetailAmt.TabIndex = 7;
             this.MtbRetailAmt.Text = "5999";
             // 
             // VideoGameForm
@@ -331,7 +330,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1375, 612);
+            this.ClientSize = new System.Drawing.Size(954, 612);
             this.Controls.Add(this.MtbRetailAmt);
             this.Controls.Add(this.MtbPurchAmt);
             this.Controls.Add(this.DtpPurchDate);

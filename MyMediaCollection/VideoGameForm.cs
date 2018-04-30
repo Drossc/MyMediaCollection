@@ -75,15 +75,25 @@ namespace MyMediaCollection
 
         }
 
-        private void TbDiscount_TextChanged(object sender, EventArgs e)
+        private void MtbPurchAmt_Leave(object sender, EventArgs e)
         {
-            MessageBox.Show("Something Happened.");
+            //ToDo Need to only make calculation if numerical value is present
+            string sPurchAmt = MtbPurchAmt.Text;
+            sPurchAmt = (sPurchAmt).Replace("$", "");
+            sPurchAmt = (sPurchAmt).Replace(" ", "");
+            decimal dPurchAmt = Convert.ToDecimal(sPurchAmt);
+            string sRetailAmt = MtbRetailAmt.Text;
+            sRetailAmt = (sRetailAmt).Replace("$", "");
+            sRetailAmt = (sRetailAmt).Replace(" ", "");
+            decimal dRetailAmt = Convert.ToDecimal(sRetailAmt);
+            decimal dDiscount = (dPurchAmt / dRetailAmt) *100;
+            int iDiscount = Convert.ToInt16(dDiscount);
+            TbDiscount.Text = Convert.ToString(iDiscount) + "%";
         }
 
-
-        private void MtbPurchAmt_TextChanged(object sender, EventArgs e)
+        private void MtbPurchAmt_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
         {
-            TbDiscount.Text = Convert.ToString((Convert.ToDecimal(MtbPurchAmt.Text) / Convert.ToDecimal(MtbRetailAmt.Text)) * 100);
+
         }
 
         //ToDo Need to be able to clear out form fields after performing an event
