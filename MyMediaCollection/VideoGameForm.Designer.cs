@@ -57,6 +57,7 @@
             this.DtpPurchDate = new System.Windows.Forms.DateTimePicker();
             this.MtbPurchAmt = new System.Windows.Forms.MaskedTextBox();
             this.MtbRetailAmt = new System.Windows.Forms.MaskedTextBox();
+            this.BtnClear = new System.Windows.Forms.Button();
             this.StatusStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -68,7 +69,7 @@
             this.tSSLable});
             this.StatusStrip.Location = new System.Drawing.Point(0, 590);
             this.StatusStrip.Name = "StatusStrip";
-            this.StatusStrip.Size = new System.Drawing.Size(954, 22);
+            this.StatusStrip.Size = new System.Drawing.Size(816, 22);
             this.StatusStrip.TabIndex = 0;
             // 
             // tSSLable
@@ -120,7 +121,6 @@
             this.LblPlatform.Size = new System.Drawing.Size(72, 20);
             this.LblPlatform.TabIndex = 5;
             this.LblPlatform.Text = "Platform:";
-            this.LblPlatform.Click += new System.EventHandler(this.LblPlatform_Click);
             // 
             // LblPurchDate
             // 
@@ -181,7 +181,7 @@
             // BtnExit
             // 
             this.BtnExit.BackColor = System.Drawing.Color.White;
-            this.BtnExit.Location = new System.Drawing.Point(637, 504);
+            this.BtnExit.Location = new System.Drawing.Point(640, 504);
             this.BtnExit.Name = "BtnExit";
             this.BtnExit.Size = new System.Drawing.Size(150, 50);
             this.BtnExit.TabIndex = 15;
@@ -325,12 +325,25 @@
             this.MtbRetailAmt.TabIndex = 7;
             this.MtbRetailAmt.Text = "5999";
             // 
+            // BtnClear
+            // 
+            this.BtnClear.BackColor = System.Drawing.Color.White;
+            this.BtnClear.Enabled = false;
+            this.BtnClear.Location = new System.Drawing.Point(484, 504);
+            this.BtnClear.Name = "BtnClear";
+            this.BtnClear.Size = new System.Drawing.Size(150, 50);
+            this.BtnClear.TabIndex = 16;
+            this.BtnClear.Text = "Clear";
+            this.BtnClear.UseVisualStyleBackColor = false;
+            this.BtnClear.Click += new System.EventHandler(this.BtnClear_Click);
+            // 
             // VideoGameForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(954, 612);
+            this.ClientSize = new System.Drawing.Size(816, 612);
+            this.Controls.Add(this.BtnClear);
             this.Controls.Add(this.MtbRetailAmt);
             this.Controls.Add(this.MtbPurchAmt);
             this.Controls.Add(this.DtpPurchDate);
@@ -399,5 +412,6 @@
         private System.Windows.Forms.DateTimePicker DtpPurchDate;
         private System.Windows.Forms.MaskedTextBox MtbPurchAmt;
         private System.Windows.Forms.MaskedTextBox MtbRetailAmt;
+        private System.Windows.Forms.Button BtnClear;
     }
 }

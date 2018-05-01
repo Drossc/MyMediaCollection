@@ -30,16 +30,12 @@ namespace MyMediaCollection
                 Title = TbTitle?.Text,
                 UPC = TbUPC?.Text,
                 Description = TbDescription?.Text,
-                //ReleaseDate = TbReleaseDate?.Text,
                 ReleaseDate = DtpReleaseDate.Value,
                 Platform = TbPlatform?.Text,
-                //PurchDate = TbPurchDate?.Text,
                 PurchDate = DtpPurchDate.Value,
-                //PurchAmt = TbPurchAmt?.Text,
                 //This may not work but need to test to see if a decimal is recorded.
                 PurchAmt = Convert.ToDecimal(MtbPurchAmt?.Text),
                 PurchLoc = TbPurchLoc?.Text,
-                //RetailAmt = TbRetailAmt?.Text,
                 RetailAmt = Convert.ToDecimal(MtbRetailAmt?.Text),
                 Discount = TbDiscount?.Text
             };
@@ -65,37 +61,32 @@ namespace MyMediaCollection
             //ToDo Remove an Existing Video Game from the DB
         }
 
-        private void TbReleaseDate_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void LblPlatform_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void MtbPurchAmt_Leave(object sender, EventArgs e)
         {
-            //ToDo Need to only make calculation if numerical value is present
+            //ToDo account for blank Retail Amount prior to doing calculation
             string sPurchAmt = MtbPurchAmt.Text;
             sPurchAmt = (sPurchAmt).Replace("$", "");
             sPurchAmt = (sPurchAmt).Replace(" ", "");
-            decimal dPurchAmt = Convert.ToDecimal(sPurchAmt);
-            string sRetailAmt = MtbRetailAmt.Text;
-            sRetailAmt = (sRetailAmt).Replace("$", "");
-            sRetailAmt = (sRetailAmt).Replace(" ", "");
-            decimal dRetailAmt = Convert.ToDecimal(sRetailAmt);
-            decimal dDiscount = (dPurchAmt / dRetailAmt) *100;
-            int iDiscount = Convert.ToInt16(dDiscount);
-            TbDiscount.Text = Convert.ToString(iDiscount) + "%";
+            if (sPurchAmt == ".")
+            {
+                TbDiscount.Text = "";
+            }
+            else
+            {
+                decimal dPurchAmt = Convert.ToDecimal(sPurchAmt);
+                string sRetailAmt = MtbRetailAmt.Text;
+                sRetailAmt = (sRetailAmt).Replace("$", "");
+                sRetailAmt = (sRetailAmt).Replace(" ", "");
+                decimal dRetailAmt = Convert.ToDecimal(sRetailAmt);
+                decimal dDiscount = (100 - ((dPurchAmt / dRetailAmt) * 100));
+                int iDiscount = Convert.ToInt16(dDiscount);
+                TbDiscount.Text = Convert.ToString(iDiscount) + "%";
+            }
         }
 
-        private void MtbPurchAmt_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        private void BtnClear_Click(object sender, EventArgs e)
         {
-
+            //ToDo Need to be able to clear out form fields after performing an event
         }
-
-        //ToDo Need to be able to clear out form fields after performing an event
     }
 }
