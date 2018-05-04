@@ -16,13 +16,19 @@ namespace MyMediaCollection
             InitializeComponent();
         }
 
+        //ToDo May need a display of found video games to select from
+
+
         private void BtnExit_Click(object sender, EventArgs e)
         {
+            //ToDo need to see if changes made and should be saved
             this.Close();
         }
 
         private void BtnAdd_Click(object sender, EventArgs e)
         {
+            //ToDo Need to check for if anything is available to add (what is minimum)
+            //ToDo Need to clearly indicate which minimum fields are missing
             //Todo need to add in date added to database
             //Todo need to add in person entering the information
             VideoGame game = new VideoGame
@@ -33,14 +39,20 @@ namespace MyMediaCollection
                 ReleaseDate = DtpReleaseDate.Value,
                 Platform = TbPlatform?.Text,
                 PurchDate = DtpPurchDate.Value,
-                //This may not work but need to test to see if a decimal is recorded.
-                PurchAmt = Convert.ToDecimal(MtbPurchAmt?.Text),
                 PurchLoc = TbPurchLoc?.Text,
-                RetailAmt = Convert.ToDecimal(MtbRetailAmt?.Text),
                 Discount = TbDiscount?.Text
             };
 
-            
+            if (MtbPurchAmt.Text != "$  .")
+            {
+                game.PurchAmt = Convert.ToDecimal(MtbPurchAmt.Text.Replace("$", "").Replace(" ", ""));
+            }
+
+            if (MtbRetailAmt.Text != "$  .")
+            {
+                game.RetailAmt = Convert.ToDecimal(MtbRetailAmt.Text.Replace("$", "").Replace(" ", ""));
+            }
+
             StringBuilder sb = new StringBuilder();
             sb.Append ("INSERT VGTable (UPC,TITLE,DESCRIPTION,RELEASEDATE,PLATFORM,PURCHASEDATE,PURCHASEAMT,");
             sb.Append("PURCHASELOCATION,RETAILAMT,DISCOUNT) VALUES ('");
@@ -63,30 +75,32 @@ namespace MyMediaCollection
 
         private void MtbPurchAmt_Leave(object sender, EventArgs e)
         {
-            //ToDo account for blank Retail Amount prior to doing calculation
-            string sPurchAmt = MtbPurchAmt.Text;
-            sPurchAmt = (sPurchAmt).Replace("$", "");
-            sPurchAmt = (sPurchAmt).Replace(" ", "");
-            if (sPurchAmt == ".")
-            {
-                TbDiscount.Text = "";
-            }
-            else
-            {
-                decimal dPurchAmt = Convert.ToDecimal(sPurchAmt);
-                string sRetailAmt = MtbRetailAmt.Text;
-                sRetailAmt = (sRetailAmt).Replace("$", "");
-                sRetailAmt = (sRetailAmt).Replace(" ", "");
-                decimal dRetailAmt = Convert.ToDecimal(sRetailAmt);
-                decimal dDiscount = (100 - ((dPurchAmt / dRetailAmt) * 100));
-                int iDiscount = Convert.ToInt16(dDiscount);
-                TbDiscount.Text = Convert.ToString(iDiscount) + "%";
-            }
+            TbDiscount.Text = Utility.CalcDiscount(MtbRetailAmt.Text, MtbPurchAmt.Text);
         }
 
+        private void MtbRetailAmt_Leave(object sender, EventArgs e)
+        {
+            TbDiscount.Text = Utility.CalcDiscount(MtbRetailAmt.Text, MtbPurchAmt.Text);
+        }
         private void BtnClear_Click(object sender, EventArgs e)
         {
-            //ToDo Need to be able to clear out form fields after performing an event
+            //Have loop go through each of the controls on the form and clear value
+            TbSearch.Text = "";
+            TbUPC.Text = "";
+            TbTitle.Text = "";
+            TbDescription.Text = "";
+            TbPlatform.Text = "";
+            DtpReleaseDate.Value = DateTime.Now;
+            DtpPurchDate.Value = DateTime.Now;
+            MtbRetailAmt.Text = "";
+            MtbPurchAmt.Text = "";
+            TbPurchLoc.Text = "";
+            TbDiscount.Text = "";
         }
+
+        /*void VideoGameForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.Show();
+        }*/
     }
 }

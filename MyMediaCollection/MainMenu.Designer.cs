@@ -39,6 +39,7 @@
             // BtnBooks
             // 
             this.BtnBooks.BackColor = System.Drawing.Color.White;
+            this.BtnBooks.Enabled = false;
             this.BtnBooks.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.BtnBooks.FlatAppearance.BorderSize = 5;
             this.BtnBooks.Location = new System.Drawing.Point(12, 12);
@@ -53,6 +54,7 @@
             // BtnMusic
             // 
             this.BtnMusic.BackColor = System.Drawing.Color.White;
+            this.BtnMusic.Enabled = false;
             this.BtnMusic.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.BtnMusic.FlatAppearance.BorderSize = 5;
             this.BtnMusic.Location = new System.Drawing.Point(12, 124);
@@ -67,6 +69,7 @@
             // BtnCinema
             // 
             this.BtnCinema.BackColor = System.Drawing.Color.White;
+            this.BtnCinema.Enabled = false;
             this.BtnCinema.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.BtnCinema.FlatAppearance.BorderSize = 5;
             this.BtnCinema.Location = new System.Drawing.Point(12, 68);

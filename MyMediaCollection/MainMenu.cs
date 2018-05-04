@@ -16,6 +16,9 @@ namespace MyMediaCollection
         {
             InitializeComponent();
             //ToDo Complete Initial Design of Main Menu
+            //ToDo May hide main menu during use of other forms
+            //ToDo Need to add in settings for stores
+            //ToDo Need to establish how to create a user
         }
 
         private void BtnBooks_Click(object sender, EventArgs e)

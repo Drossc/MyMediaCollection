@@ -60,7 +60,7 @@ namespace MyMediaCollection
         {
             string statusMsg = null;
             string connectionString = Utility.GetConnectionString();
-            
+
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 SqlCommand cmdNewGame = new SqlCommand();
