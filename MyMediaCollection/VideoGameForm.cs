@@ -27,40 +27,51 @@ namespace MyMediaCollection
 
         private void BtnAdd_Click(object sender, EventArgs e)
         {
-            //ToDo Need to check for if anything is available to add (what is minimum)
-            //ToDo Need to clearly indicate which minimum fields are missing
-            //Todo need to add in date added to database
-            //Todo need to add in person entering the information
-            VideoGame game = new VideoGame
-            {
-                Title = TbTitle?.Text,
-                UPC = TbUPC?.Text,
-                Description = TbDescription?.Text,
-                ReleaseDate = DtpReleaseDate.Value,
-                Platform = TbPlatform?.Text,
-                PurchDate = DtpPurchDate.Value,
-                PurchLoc = TbPurchLoc?.Text,
-                Discount = TbDiscount?.Text
-            };
+            if (TbTitle.Text != "" && CmbPlatform.Text != "")
+            { 
+                VideoGame game = new VideoGame
+                {
+                    Title = TbTitle?.Text,
+                    UPC = TbUPC?.Text,
+                    Description = TbDescription?.Text,
+                    ReleaseDate = DtpReleaseDate.Value,
+                    Platform = CmbPlatform?.Text,
+                    PurchDate = DtpPurchDate.Value,
+                    PurchLoc = CmbPurchLoc?.Text,
+                    Discount = TbDiscount?.Text.Replace("%",""),
+                    Rating = CmbRating?.Text,
+                    Digital = CbDigital.Checked,
+                    DateAdded = DateTime.Now,
+                    AddedBy = "Someone"
+                };
 
-            if (MtbPurchAmt.Text != "$  .")
-            {
-                game.PurchAmt = Convert.ToDecimal(MtbPurchAmt.Text.Replace("$", "").Replace(" ", ""));
+                if (MtbPurchAmt.Text != "$  .")
+                {
+                    game.PurchAmt = Convert.ToDecimal(MtbPurchAmt.Text.Replace("$", "").Replace(" ", ""));
+                }
+
+                if (MtbRetailAmt.Text != "$  .")
+                {
+                    game.RetailAmt = Convert.ToDecimal(MtbRetailAmt.Text.Replace("$", "").Replace(" ", ""));
+                }
+
+                StringBuilder sb = new StringBuilder();
+                sb.Append ("INSERT VGTable (UPC,TITLE,DESCRIPTION,RELEASEDATE,PLATFORM,PURCHASEDATE,PURCHASEAMT,");
+                sb.Append("PURCHASELOCATION,RETAILAMT,DISCOUNT,RATING,DIGITAL,DATEADDED,ADDEDBY) VALUES ('");
+                sb.Append(game.UPC + "','" + game.Title + "','" + game.Description + "','" + game.ReleaseDate + "','" + game.Platform);
+                sb.Append("','" + game.PurchDate + "','" + game.PurchAmt + "','" + game.PurchLoc + "','" + game.RetailAmt + "','");
+                sb.Append(game.Discount + "','" + game.Rating + "','" + game.Digital + "','" + game.DateAdded + "','" + game.AddedBy + "')");
+
+                TbTitle.BackColor = (Color.FromKnownColor(KnownColor.Window));
+                CmbPlatform.BackColor = (Color.FromKnownColor(KnownColor.Window));
+                tSSLable.Text = game.AddGame(sb.ToString(), game.DateAdded);
             }
-
-            if (MtbRetailAmt.Text != "$  .")
+            else
             {
-                game.RetailAmt = Convert.ToDecimal(MtbRetailAmt.Text.Replace("$", "").Replace(" ", ""));
+                tSSLable.Text = "Please enter the Game Title and Platform.";
+                if (TbTitle.Text == ""){ TbTitle.BackColor = Color.Red; }
+                if (CmbPlatform.Text == "") { CmbPlatform.BackColor = Color.Red; }
             }
-
-            StringBuilder sb = new StringBuilder();
-            sb.Append ("INSERT VGTable (UPC,TITLE,DESCRIPTION,RELEASEDATE,PLATFORM,PURCHASEDATE,PURCHASEAMT,");
-            sb.Append("PURCHASELOCATION,RETAILAMT,DISCOUNT) VALUES ('");
-            sb.Append(game.UPC + "','" + game.Title + "','" + game.Description + "','" + game.ReleaseDate + "','" + game.Platform);
-            sb.Append("','" + game.PurchDate + "','" + game.PurchAmt + "','" + game.PurchLoc + "','" + game.RetailAmt + "','");
-            sb.Append(game.Discount + "')");
-
-            tSSLable.Text = game.AddGame(sb.ToString());
         }
 
         private void BtnSearch_Click(object sender, EventArgs e)
@@ -89,18 +100,20 @@ namespace MyMediaCollection
             TbUPC.Text = "";
             TbTitle.Text = "";
             TbDescription.Text = "";
-            TbPlatform.Text = "";
+            CmbPlatform.Text = "";
             DtpReleaseDate.Value = DateTime.Now;
             DtpPurchDate.Value = DateTime.Now;
             MtbRetailAmt.Text = "";
             MtbPurchAmt.Text = "";
-            TbPurchLoc.Text = "";
+            CmbPurchLoc.Text = "";
             TbDiscount.Text = "";
+            CmbRating.Text = "";
+            CbDigital.Checked = false;
         }
 
-        /*void VideoGameForm_FormClosed(object sender, FormClosedEventArgs e)
+        private void LlRatings_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            this.Show();
-        }*/
+            //ToDo Need to add in link to default brower to esrb site http://www.esrb.org/
+        }
     }
 }

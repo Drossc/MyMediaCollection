@@ -50,13 +50,29 @@ namespace MyMediaCollection
         /// Difference between Retail Amount and Purchase Amount.
         /// </summary>
         public string Discount;
+        /// <summary>
+        /// Public game rating.
+        /// </summary>
+        public string Rating;
+        /// <summary>
+        /// Identifies if purchase was done digitally.
+        /// </summary>
+        public bool Digital;
+        /// <summary>
+        /// Date added to database.
+        /// </summary>
+        public DateTime DateAdded;
+        /// <summary>
+        /// Username of person adding/updating information.
+        /// </summary>
+        public string AddedBy;
 
         /// <summary>
         /// Adds game to database while returning status message.
         /// </summary>
         /// <param name="cmdText"></param>
         /// <returns></returns>
-        public string AddGame(string cmdText)
+        public string AddGame(string cmdText, DateTime dateAdded)
         {
             string statusMsg = null;
             string connectionString = Utility.GetConnectionString();
@@ -74,24 +90,24 @@ namespace MyMediaCollection
                         connection.Open();
                         cmdNewGame.ExecuteNonQuery();
                         connection.Close();
-                        statusMsg = Convert.ToString(DateTime.Now) + " Game Added Successfully!";
+                        statusMsg = Convert.ToString(dateAdded) + " Game Added Successfully!";
                         break;
                     case ConnectionState.Open:
                         cmdNewGame.ExecuteNonQuery();
                         connection.Close();
-                        statusMsg = Convert.ToString(DateTime.Now) + " Game Added Successfully!";
+                        statusMsg = Convert.ToString(dateAdded) + " Game Added Successfully!";
                         break;
                     case ConnectionState.Connecting:
-                        statusMsg = Convert.ToString(DateTime.Now) + " Still Connecting, Addition Failed.";
+                        statusMsg = Convert.ToString(dateAdded) + " Still Connecting, Addition Failed.";
                         break;
                     case ConnectionState.Executing:
-                        statusMsg = Convert.ToString(DateTime.Now) + " Still Executing!";
+                        statusMsg = Convert.ToString(dateAdded) + " Still Executing!";
                         break;
                     case ConnectionState.Fetching:
-                        statusMsg = Convert.ToString(DateTime.Now) + " Still Fetching Results.";
+                        statusMsg = Convert.ToString(dateAdded) + " Still Fetching Results.";
                         break;
                     case ConnectionState.Broken:
-                        statusMsg = Convert.ToString(DateTime.Now) + " Game Not Added. Connection Broken.";
+                        statusMsg = Convert.ToString(dateAdded) + " Game Not Added. Connection Broken.";
                         break;
                 }
             }
