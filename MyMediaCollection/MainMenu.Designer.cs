@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.BtnBooks = new System.Windows.Forms.Button();
-            this.BtnMusic = new System.Windows.Forms.Button();
-            this.BtnCinema = new System.Windows.Forms.Button();
-            this.BtnVideoGames = new System.Windows.Forms.Button();
-            this.BtnExit = new System.Windows.Forms.Button();
             this.statusStrip = new System.Windows.Forms.StatusStrip();
+            this.BtnExit = new System.Windows.Forms.Button();
+            this.BtnVideoGames = new System.Windows.Forms.Button();
+            this.BtnCinema = new System.Windows.Forms.Button();
+            this.BtnMusic = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // BtnBooks
@@ -51,35 +51,28 @@
             this.BtnBooks.UseVisualStyleBackColor = false;
             this.BtnBooks.Click += new System.EventHandler(this.BtnBooks_Click);
             // 
-            // BtnMusic
+            // statusStrip
             // 
-            this.BtnMusic.BackColor = System.Drawing.Color.White;
-            this.BtnMusic.Enabled = false;
-            this.BtnMusic.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.BtnMusic.FlatAppearance.BorderSize = 5;
-            this.BtnMusic.Location = new System.Drawing.Point(12, 124);
-            this.BtnMusic.Name = "BtnMusic";
-            this.BtnMusic.Size = new System.Drawing.Size(150, 50);
-            this.BtnMusic.TabIndex = 2;
-            this.BtnMusic.Text = "Music";
-            this.BtnMusic.UseMnemonic = false;
-            this.BtnMusic.UseVisualStyleBackColor = false;
-            this.BtnMusic.Click += new System.EventHandler(this.BtnMusic_Click);
+            this.statusStrip.BackColor = System.Drawing.Color.White;
+            this.statusStrip.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.statusStrip.Location = new System.Drawing.Point(0, 364);
+            this.statusStrip.Name = "statusStrip";
+            this.statusStrip.Size = new System.Drawing.Size(800, 28);
+            this.statusStrip.TabIndex = 5;
             // 
-            // BtnCinema
+            // BtnExit
             // 
-            this.BtnCinema.BackColor = System.Drawing.Color.White;
-            this.BtnCinema.Enabled = false;
-            this.BtnCinema.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.BtnCinema.FlatAppearance.BorderSize = 5;
-            this.BtnCinema.Location = new System.Drawing.Point(12, 68);
-            this.BtnCinema.Name = "BtnCinema";
-            this.BtnCinema.Size = new System.Drawing.Size(150, 50);
-            this.BtnCinema.TabIndex = 1;
-            this.BtnCinema.Text = "Cinema";
-            this.BtnCinema.UseMnemonic = false;
-            this.BtnCinema.UseVisualStyleBackColor = false;
-            this.BtnCinema.Click += new System.EventHandler(this.BtnCinema_Click);
+            this.BtnExit.BackColor = System.Drawing.Color.White;
+            this.BtnExit.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.BtnExit.FlatAppearance.BorderSize = 5;
+            this.BtnExit.Location = new System.Drawing.Point(12, 236);
+            this.BtnExit.Name = "BtnExit";
+            this.BtnExit.Size = new System.Drawing.Size(150, 50);
+            this.BtnExit.TabIndex = 4;
+            this.BtnExit.Text = "Exit";
+            this.BtnExit.UseMnemonic = false;
+            this.BtnExit.UseVisualStyleBackColor = false;
+            this.BtnExit.Click += new System.EventHandler(this.BtnExit_Click);
             // 
             // BtnVideoGames
             // 
@@ -95,35 +88,40 @@
             this.BtnVideoGames.UseVisualStyleBackColor = false;
             this.BtnVideoGames.Click += new System.EventHandler(this.BtnVideoGames_Click);
             // 
-            // BtnExit
+            // BtnCinema
             // 
-            this.BtnExit.BackColor = System.Drawing.Color.White;
-            this.BtnExit.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.BtnExit.FlatAppearance.BorderSize = 5;
-            this.BtnExit.Location = new System.Drawing.Point(12, 364);
-            this.BtnExit.Name = "BtnExit";
-            this.BtnExit.Size = new System.Drawing.Size(150, 50);
-            this.BtnExit.TabIndex = 4;
-            this.BtnExit.Text = "Exit";
-            this.BtnExit.UseMnemonic = false;
-            this.BtnExit.UseVisualStyleBackColor = false;
-            this.BtnExit.Click += new System.EventHandler(this.BtnExit_Click);
+            this.BtnCinema.BackColor = System.Drawing.Color.White;
+            this.BtnCinema.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.BtnCinema.FlatAppearance.BorderSize = 5;
+            this.BtnCinema.Location = new System.Drawing.Point(12, 68);
+            this.BtnCinema.Name = "BtnCinema";
+            this.BtnCinema.Size = new System.Drawing.Size(150, 50);
+            this.BtnCinema.TabIndex = 1;
+            this.BtnCinema.Text = "Cinema";
+            this.BtnCinema.UseMnemonic = false;
+            this.BtnCinema.UseVisualStyleBackColor = false;
+            this.BtnCinema.Click += new System.EventHandler(this.BtnCinema_Click);
             // 
-            // statusStrip
+            // BtnMusic
             // 
-            this.statusStrip.BackColor = System.Drawing.Color.White;
-            this.statusStrip.ImageScalingSize = new System.Drawing.Size(24, 24);
-            this.statusStrip.Location = new System.Drawing.Point(0, 428);
-            this.statusStrip.Name = "statusStrip";
-            this.statusStrip.Size = new System.Drawing.Size(800, 22);
-            this.statusStrip.TabIndex = 5;
+            this.BtnMusic.BackColor = System.Drawing.Color.White;
+            this.BtnMusic.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.BtnMusic.FlatAppearance.BorderSize = 5;
+            this.BtnMusic.Location = new System.Drawing.Point(12, 124);
+            this.BtnMusic.Name = "BtnMusic";
+            this.BtnMusic.Size = new System.Drawing.Size(150, 50);
+            this.BtnMusic.TabIndex = 2;
+            this.BtnMusic.Text = "Music";
+            this.BtnMusic.UseMnemonic = false;
+            this.BtnMusic.UseVisualStyleBackColor = false;
+            this.BtnMusic.Click += new System.EventHandler(this.BtnMusic_Click);
             // 
             // MainMenuForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 392);
             this.Controls.Add(this.statusStrip);
             this.Controls.Add(this.BtnExit);
             this.Controls.Add(this.BtnVideoGames);
@@ -140,11 +138,11 @@
         #endregion
 
         private System.Windows.Forms.Button BtnBooks;
-        private System.Windows.Forms.Button BtnMusic;
-        private System.Windows.Forms.Button BtnCinema;
-        private System.Windows.Forms.Button BtnVideoGames;
-        private System.Windows.Forms.Button BtnExit;
         private System.Windows.Forms.StatusStrip statusStrip;
+        private System.Windows.Forms.Button BtnExit;
+        private System.Windows.Forms.Button BtnVideoGames;
+        private System.Windows.Forms.Button BtnCinema;
+        private System.Windows.Forms.Button BtnMusic;
     }
 }
 

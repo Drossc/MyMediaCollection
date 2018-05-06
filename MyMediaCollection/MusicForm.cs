@@ -17,5 +17,15 @@ namespace MyMediaCollection
             InitializeComponent();
             //ToDo Setup Music Form
         }
+
+        private void LlRatings_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            //ToDo Add in ability to pull up default webrowser to https://www.riaa.com/resources-learning/parental-advisory-label/
+        }
+
+        private void BtnExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

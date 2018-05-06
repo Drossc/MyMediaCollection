@@ -427,6 +427,7 @@
             this.LlRatings.Name = "LlRatings";
             this.LlRatings.Size = new System.Drawing.Size(109, 20);
             this.LlRatings.TabIndex = 6;
+            this.LlRatings.TabStop = true;
             this.LlRatings.Text = "ESRB Rating:";
             this.LlRatings.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LlRatings_LinkClicked);
             // 
@@ -455,7 +456,7 @@
             this.GbSearch.Size = new System.Drawing.Size(771, 80);
             this.GbSearch.TabIndex = 0;
             this.GbSearch.TabStop = false;
-            this.GbSearch.Text = "Search Existing Game:";
+            this.GbSearch.Text = "Search Game:";
             // 
             // VideoGameForm
             // 

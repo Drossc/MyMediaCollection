@@ -17,5 +17,10 @@ namespace MyMediaCollection
             InitializeComponent();
             //ToDo Setup Books Form
         }
+
+        private void BtnExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
