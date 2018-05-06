@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2043
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "MyMediaCollectionDb", "MyMediaCollectionDb.sqlproj", "{84A18E76-DBDD-4D7A-8F17-F6FE1B829E02}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{84A18E76-DBDD-4D7A-8F17-F6FE1B829E02}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84A18E76-DBDD-4D7A-8F17-F6FE1B829E02}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84A18E76-DBDD-4D7A-8F17-F6FE1B829E02}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{84A18E76-DBDD-4D7A-8F17-F6FE1B829E02}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84A18E76-DBDD-4D7A-8F17-F6FE1B829E02}.Release|Any CPU.Build.0 = Release|Any CPU
+		{84A18E76-DBDD-4D7A-8F17-F6FE1B829E02}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A12A628F-7C3D-4481-943A-9019050162B4}
+	EndGlobalSection
+EndGlobal
