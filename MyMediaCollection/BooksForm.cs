@@ -22,5 +22,31 @@ namespace MyMediaCollection
         {
             this.Close();
         }
+
+        private void MtbPurchAmt_Leave(object sender, EventArgs e)
+        {
+            TbDiscount.Text = Utility.CalcDiscount(MtbRetailAmt.Text, MtbPurchAmt.Text);
+        }
+
+        private void MtbRetailAmt_Leave(object sender, EventArgs e)
+        {
+            TbDiscount.Text = Utility.CalcDiscount(MtbRetailAmt.Text, MtbPurchAmt.Text);
+        }
+
+        private void BtnClear_Click(object sender, EventArgs e)
+        {
+            TbSearch.Text = "";
+            TbTitle.Text = "";
+            TbDescription.Text = "";
+            DtpReleaseDate.Value = DateTime.Now;
+            MtbRetailAmt.Text = "";
+            CbDigital.Checked = false;
+            CbPhysical.Checked = false;
+            DtpPurchDate.Text = "";
+            MtbPurchAmt.Text = "";
+            CmbPurchLoc.Text = "";
+            TbDiscount.Text = "";
+            TbUPC.Text = "";
+        }
     }
 }

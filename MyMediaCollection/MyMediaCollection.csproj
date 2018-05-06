@@ -45,6 +45,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Album.cs" />
+    <Compile Include="AppUser.cs" />
+    <Compile Include="Book.cs" />
     <Compile Include="BooksForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -63,6 +66,7 @@
     <Compile Include="MainMenu.Designer.cs">
       <DependentUpon>MainMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Movie.cs" />
     <Compile Include="MusicForm.cs">
       <SubType>Form</SubType>
     </Compile>

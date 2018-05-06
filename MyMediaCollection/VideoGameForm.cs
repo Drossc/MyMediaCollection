@@ -93,6 +93,7 @@ namespace MyMediaCollection
         {
             TbDiscount.Text = Utility.CalcDiscount(MtbRetailAmt.Text, MtbPurchAmt.Text);
         }
+
         private void BtnClear_Click(object sender, EventArgs e)
         {
             //Have loop go through each of the controls on the form and clear value
