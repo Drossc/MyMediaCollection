@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MyMediaCollection
 {
@@ -17,11 +13,11 @@ namespace MyMediaCollection
         /// </summary>
         public DateTime DateAdded;
         /// <summary>
-        /// Description the game.
+        /// Description the media.
         /// </summary>
         public string Description;
         /// <summary>
-        /// Identifies if purchase was done digitally.
+        /// Identifies if purchase was digital.
         /// </summary>
         public bool Digital;
         /// <summary>
@@ -29,11 +25,11 @@ namespace MyMediaCollection
         /// </summary>
         public string Discount;
         /// <summary>
-        /// Amount game was purchased for.
+        /// Amount media was purchased for.
         /// </summary>
         public decimal PurchAmt;
         /// <summary>
-        /// Date game was purchased on.
+        /// Date media was purchased on.
         /// </summary>
         public DateTime PurchDate;
         /// <summary>
@@ -41,20 +37,24 @@ namespace MyMediaCollection
         /// </summary>
         public string PurchLoc;
         /// <summary>
-        /// Initial release date of the game.
+        /// Initial release date of the media.
         /// </summary>
         public DateTime ReleaseDate;
         /// <summary>
-        /// Original retail amount game released for.
+        /// Original retail amount media released for.
         /// </summary>
         public decimal RetailAmt;
         /// <summary>
-        /// Title of the game.
+        /// Title of the media.
         /// </summary>
         public string Title;
         /// <summary>
-        /// UPC from the back of the game.
+        /// UPC from the back of the media.
         /// </summary>
         public string UPC;
+        /// <summary>
+        /// Genre indicated for the media.
+        /// </summary>
+        public string Genre;
     }
 }

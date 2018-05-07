@@ -14,4 +14,18 @@
     <Property Name="ParentElementType" Value="SqlTable" />
     <Property Name="NewName" Value="RETAILAMT" />
   </Operation>
+  <Operation Name="Rename Refactor" Key="5a0aa2f3-6c99-4d50-87ba-7639126526dd" ChangeDateTime="05/07/2018 14:09:12">
+    <Property Name="ElementName" Value="[dbo].[VGTable].[GENRE]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[VGTable]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="GENRES" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="495e4711-b0a8-4e86-875e-f8a236c5d687" ChangeDateTime="05/07/2018 14:09:19">
+    <Property Name="ElementName" Value="[dbo].[VGTable].[GENRES]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[VGTable]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="GENRE" />
+  </Operation>
 </Operations>
