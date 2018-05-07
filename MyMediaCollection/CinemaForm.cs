@@ -27,5 +27,26 @@ namespace MyMediaCollection
         {
             this.Close();
         }
+
+        private void CbBluRay_CheckedChanged(object sender, EventArgs e)
+        {
+            if (CbBluRay.Checked == true) {EnableUPC();}
+        }
+
+        private void CbDvd_CheckedChanged(object sender, EventArgs e)
+        {
+            if (CbVHS.Checked == true) {EnableUPC();}
+        }
+
+        private void CbVHS_CheckedChanged(object sender, EventArgs e)
+        {
+            if (CbVHS.Checked == true){EnableUPC();}
+        }
+
+        private void EnableUPC()
+        {
+            TbUPC.Text = "";
+            TbUPC.Enabled = true;
+        }
     }
 }

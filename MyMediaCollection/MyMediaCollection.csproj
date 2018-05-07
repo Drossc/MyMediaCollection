@@ -66,6 +66,7 @@
     <Compile Include="MainMenu.Designer.cs">
       <DependentUpon>MainMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Media.cs" />
     <Compile Include="Movie.cs" />
     <Compile Include="MusicForm.cs">
       <SubType>Form</SubType>

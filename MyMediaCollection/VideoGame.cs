@@ -8,65 +8,16 @@ using System.Data.SqlClient;
 
 namespace MyMediaCollection
 {
-    public class VideoGame
+    public class VideoGame : Media
     {
-        /// <summary>
-        /// Title of the game.
-        /// </summary>
-        public string Title;
-        /// <summary>
-        /// UPC from the back of the game.
-        /// </summary>
-        public string UPC;
-        /// <summary>
-        /// Description the game.
-        /// </summary>
-        public string Description;
-        /// <summary>
-        /// Initial release date of the game.
-        /// </summary>
-        public DateTime ReleaseDate;
         /// <summary>
         /// Platform game was purchased on.
         /// </summary>
         public string Platform;
         /// <summary>
-        /// Date game was purchased on.
-        /// </summary>
-        public DateTime PurchDate;
-        /// <summary>
-        /// Amount game was purchased for.
-        /// </summary>
-        public decimal PurchAmt;
-        /// <summary>
-        /// Location purchase took place at.
-        /// </summary>
-        public string PurchLoc;
-        /// <summary>
-        /// Original retail amount game released for.
-        /// </summary>
-        public decimal RetailAmt;
-        /// <summary>
-        /// Difference between Retail Amount and Purchase Amount.
-        /// </summary>
-        public string Discount;
-        /// <summary>
         /// Public game rating.
         /// </summary>
         public string Rating;
-        /// <summary>
-        /// Identifies if purchase was done digitally.
-        /// </summary>
-        public bool Digital;
-        /// <summary>
-        /// Date added to database.
-        /// </summary>
-        public DateTime DateAdded;
-        /// <summary>
-        /// Username of person adding/updating information.
-        /// </summary>
-        public string AddedBy;
-
         /// <summary>
         /// Adds game to database while returning status message.
         /// </summary>

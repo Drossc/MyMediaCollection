@@ -44,9 +44,12 @@
             this.LblRetailAmt = new System.Windows.Forms.Label();
             this.CbDigital = new System.Windows.Forms.CheckBox();
             this.GbPurchases = new System.Windows.Forms.GroupBox();
+            this.CbVHS = new System.Windows.Forms.CheckBox();
             this.CmbPurchLoc = new System.Windows.Forms.ComboBox();
-            this.LblUPC = new System.Windows.Forms.Label();
+            this.CbDvd = new System.Windows.Forms.CheckBox();
             this.TbUPC = new System.Windows.Forms.TextBox();
+            this.LblUPC = new System.Windows.Forms.Label();
+            this.CbBluRay = new System.Windows.Forms.CheckBox();
             this.MtbPurchAmt = new System.Windows.Forms.MaskedTextBox();
             this.LblPurchDate = new System.Windows.Forms.Label();
             this.TbDiscount = new System.Windows.Forms.TextBox();
@@ -61,9 +64,6 @@
             this.BtnAdd = new System.Windows.Forms.Button();
             this.BtnExit = new System.Windows.Forms.Button();
             this.BtnRemove = new System.Windows.Forms.Button();
-            this.CbBluRay = new System.Windows.Forms.CheckBox();
-            this.CbDvd = new System.Windows.Forms.CheckBox();
-            this.CbVHS = new System.Windows.Forms.CheckBox();
             this.GbSearch.SuspendLayout();
             this.GbGenDetails.SuspendLayout();
             this.GbPurchases.SuspendLayout();
@@ -249,6 +249,19 @@
             this.GbPurchases.TabStop = false;
             this.GbPurchases.Text = "Purchases";
             // 
+            // CbVHS
+            // 
+            this.CbVHS.AutoSize = true;
+            this.CbVHS.CheckAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.CbVHS.Location = new System.Drawing.Point(193, 25);
+            this.CbVHS.Name = "CbVHS";
+            this.CbVHS.Size = new System.Drawing.Size(47, 45);
+            this.CbVHS.TabIndex = 17;
+            this.CbVHS.Text = "VHS";
+            this.CbVHS.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.CbVHS.UseVisualStyleBackColor = true;
+            this.CbVHS.CheckedChanged += new System.EventHandler(this.CbVHS_CheckedChanged);
+            // 
             // CmbPurchLoc
             // 
             this.CmbPurchLoc.FormattingEnabled = true;
@@ -265,6 +278,27 @@
             this.CmbPurchLoc.TabIndex = 11;
             this.CmbPurchLoc.Text = "Amazon";
             // 
+            // CbDvd
+            // 
+            this.CbDvd.AutoSize = true;
+            this.CbDvd.CheckAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.CbDvd.Location = new System.Drawing.Point(139, 25);
+            this.CbDvd.Name = "CbDvd";
+            this.CbDvd.Size = new System.Drawing.Size(48, 45);
+            this.CbDvd.TabIndex = 15;
+            this.CbDvd.Text = "DVD";
+            this.CbDvd.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.CbDvd.UseVisualStyleBackColor = true;
+            this.CbDvd.CheckedChanged += new System.EventHandler(this.CbDvd_CheckedChanged);
+            // 
+            // TbUPC
+            // 
+            this.TbUPC.Location = new System.Drawing.Point(707, 47);
+            this.TbUPC.Name = "TbUPC";
+            this.TbUPC.Size = new System.Drawing.Size(128, 26);
+            this.TbUPC.TabIndex = 8;
+            this.TbUPC.Text = "883929319572";
+            // 
             // LblUPC
             // 
             this.LblUPC.AutoSize = true;
@@ -274,13 +308,18 @@
             this.LblUPC.TabIndex = 2;
             this.LblUPC.Text = "UPC:";
             // 
-            // TbUPC
+            // CbBluRay
             // 
-            this.TbUPC.Location = new System.Drawing.Point(707, 47);
-            this.TbUPC.Name = "TbUPC";
-            this.TbUPC.Size = new System.Drawing.Size(128, 26);
-            this.TbUPC.TabIndex = 8;
-            this.TbUPC.Text = "883929319572";
+            this.CbBluRay.AutoSize = true;
+            this.CbBluRay.CheckAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.CbBluRay.Location = new System.Drawing.Point(69, 25);
+            this.CbBluRay.Name = "CbBluRay";
+            this.CbBluRay.Size = new System.Drawing.Size(64, 45);
+            this.CbBluRay.TabIndex = 14;
+            this.CbBluRay.Text = "BluRay";
+            this.CbBluRay.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.CbBluRay.UseVisualStyleBackColor = true;
+            this.CbBluRay.CheckedChanged += new System.EventHandler(this.CbBluRay_CheckedChanged);
             // 
             // MtbPurchAmt
             // 
@@ -413,42 +452,6 @@
             this.BtnRemove.TabIndex = 14;
             this.BtnRemove.Text = "Remove";
             this.BtnRemove.UseVisualStyleBackColor = false;
-            // 
-            // CbBluRay
-            // 
-            this.CbBluRay.AutoSize = true;
-            this.CbBluRay.CheckAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.CbBluRay.Location = new System.Drawing.Point(69, 25);
-            this.CbBluRay.Name = "CbBluRay";
-            this.CbBluRay.Size = new System.Drawing.Size(64, 45);
-            this.CbBluRay.TabIndex = 14;
-            this.CbBluRay.Text = "BluRay";
-            this.CbBluRay.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.CbBluRay.UseVisualStyleBackColor = true;
-            // 
-            // CbDvd
-            // 
-            this.CbDvd.AutoSize = true;
-            this.CbDvd.CheckAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.CbDvd.Location = new System.Drawing.Point(139, 25);
-            this.CbDvd.Name = "CbDvd";
-            this.CbDvd.Size = new System.Drawing.Size(48, 45);
-            this.CbDvd.TabIndex = 15;
-            this.CbDvd.Text = "DVD";
-            this.CbDvd.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.CbDvd.UseVisualStyleBackColor = true;
-            // 
-            // CbVHS
-            // 
-            this.CbVHS.AutoSize = true;
-            this.CbVHS.CheckAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.CbVHS.Location = new System.Drawing.Point(193, 25);
-            this.CbVHS.Name = "CbVHS";
-            this.CbVHS.Size = new System.Drawing.Size(47, 45);
-            this.CbVHS.TabIndex = 17;
-            this.CbVHS.Text = "VHS";
-            this.CbVHS.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.CbVHS.UseVisualStyleBackColor = true;
             // 
             // Cinema
             // 
