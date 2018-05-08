@@ -60,6 +60,8 @@
             this.GbPurchases = new System.Windows.Forms.GroupBox();
             this.CbDigital = new System.Windows.Forms.CheckBox();
             this.GbGenDetails = new System.Windows.Forms.GroupBox();
+            this.LblGenre = new System.Windows.Forms.Label();
+            this.CmbGenre = new System.Windows.Forms.ComboBox();
             this.LlRatings = new System.Windows.Forms.LinkLabel();
             this.CmbRating = new System.Windows.Forms.ComboBox();
             this.GbSearch = new System.Windows.Forms.GroupBox();
@@ -75,7 +77,7 @@
             this.StatusStrip.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.StatusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tSSLable});
-            this.StatusStrip.Location = new System.Drawing.Point(0, 449);
+            this.StatusStrip.Location = new System.Drawing.Point(0, 522);
             this.StatusStrip.Name = "StatusStrip";
             this.StatusStrip.Size = new System.Drawing.Size(964, 22);
             this.StatusStrip.TabIndex = 0;
@@ -115,7 +117,7 @@
             // LblReleaseDate
             // 
             this.LblReleaseDate.AutoSize = true;
-            this.LblReleaseDate.Location = new System.Drawing.Point(507, 22);
+            this.LblReleaseDate.Location = new System.Drawing.Point(624, 79);
             this.LblReleaseDate.Name = "LblReleaseDate";
             this.LblReleaseDate.Size = new System.Drawing.Size(111, 20);
             this.LblReleaseDate.TabIndex = 4;
@@ -178,7 +180,7 @@
             // BtnAdd
             // 
             this.BtnAdd.BackColor = System.Drawing.Color.White;
-            this.BtnAdd.Location = new System.Drawing.Point(789, 32);
+            this.BtnAdd.Location = new System.Drawing.Point(789, 125);
             this.BtnAdd.Name = "BtnAdd";
             this.BtnAdd.Size = new System.Drawing.Size(150, 50);
             this.BtnAdd.TabIndex = 3;
@@ -189,7 +191,7 @@
             // BtnExit
             // 
             this.BtnExit.BackColor = System.Drawing.Color.White;
-            this.BtnExit.Location = new System.Drawing.Point(789, 232);
+            this.BtnExit.Location = new System.Drawing.Point(789, 325);
             this.BtnExit.Name = "BtnExit";
             this.BtnExit.Size = new System.Drawing.Size(150, 50);
             this.BtnExit.TabIndex = 7;
@@ -201,7 +203,7 @@
             // 
             this.BtnRemove.BackColor = System.Drawing.Color.White;
             this.BtnRemove.Enabled = false;
-            this.BtnRemove.Location = new System.Drawing.Point(789, 132);
+            this.BtnRemove.Location = new System.Drawing.Point(789, 225);
             this.BtnRemove.Name = "BtnRemove";
             this.BtnRemove.Size = new System.Drawing.Size(150, 50);
             this.BtnRemove.TabIndex = 5;
@@ -213,7 +215,7 @@
             // 
             this.BtnSearch.BackColor = System.Drawing.Color.White;
             this.BtnSearch.Enabled = false;
-            this.BtnSearch.Location = new System.Drawing.Point(486, 20);
+            this.BtnSearch.Location = new System.Drawing.Point(615, 20);
             this.BtnSearch.Name = "BtnSearch";
             this.BtnSearch.Size = new System.Drawing.Size(150, 50);
             this.BtnSearch.TabIndex = 1;
@@ -223,9 +225,9 @@
             // 
             // TbSearch
             // 
-            this.TbSearch.Location = new System.Drawing.Point(6, 32);
+            this.TbSearch.Location = new System.Drawing.Point(31, 32);
             this.TbSearch.Name = "TbSearch";
-            this.TbSearch.Size = new System.Drawing.Size(474, 26);
+            this.TbSearch.Size = new System.Drawing.Size(578, 26);
             this.TbSearch.TabIndex = 0;
             // 
             // TbTitle
@@ -249,7 +251,7 @@
             this.TbDescription.Location = new System.Drawing.Point(31, 102);
             this.TbDescription.Multiline = true;
             this.TbDescription.Name = "TbDescription";
-            this.TbDescription.Size = new System.Drawing.Size(474, 85);
+            this.TbDescription.Size = new System.Drawing.Size(474, 148);
             this.TbDescription.TabIndex = 3;
             this.TbDescription.Text = "An Entirely Fresh Open World Experience - Gamespot";
             // 
@@ -259,12 +261,13 @@
             this.TbDiscount.Name = "TbDiscount";
             this.TbDiscount.Size = new System.Drawing.Size(72, 26);
             this.TbDiscount.TabIndex = 12;
+            this.TbDiscount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // BtnUpdate
             // 
             this.BtnUpdate.BackColor = System.Drawing.Color.White;
             this.BtnUpdate.Enabled = false;
-            this.BtnUpdate.Location = new System.Drawing.Point(789, 82);
+            this.BtnUpdate.Location = new System.Drawing.Point(789, 175);
             this.BtnUpdate.Name = "BtnUpdate";
             this.BtnUpdate.Size = new System.Drawing.Size(150, 50);
             this.BtnUpdate.TabIndex = 4;
@@ -275,9 +278,9 @@
             // 
             this.DtpReleaseDate.CustomFormat = "MM/dd/yyyy";
             this.DtpReleaseDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.DtpReleaseDate.Location = new System.Drawing.Point(511, 45);
+            this.DtpReleaseDate.Location = new System.Drawing.Point(628, 102);
             this.DtpReleaseDate.Name = "DtpReleaseDate";
-            this.DtpReleaseDate.Size = new System.Drawing.Size(198, 26);
+            this.DtpReleaseDate.Size = new System.Drawing.Size(137, 26);
             this.DtpReleaseDate.TabIndex = 4;
             this.DtpReleaseDate.Value = new System.DateTime(2014, 9, 30, 0, 0, 0, 0);
             // 
@@ -299,7 +302,7 @@
             this.MtbPurchAmt.Size = new System.Drawing.Size(65, 26);
             this.MtbPurchAmt.TabIndex = 10;
             this.MtbPurchAmt.Text = "1499";
-            this.MtbPurchAmt.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.MtbPurchAmt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.MtbPurchAmt.Leave += new System.EventHandler(this.MtbPurchAmt_Leave);
             // 
             // MtbRetailAmt
@@ -307,16 +310,16 @@
             this.MtbRetailAmt.Location = new System.Drawing.Point(511, 102);
             this.MtbRetailAmt.Mask = "$99.00";
             this.MtbRetailAmt.Name = "MtbRetailAmt";
-            this.MtbRetailAmt.Size = new System.Drawing.Size(198, 26);
+            this.MtbRetailAmt.Size = new System.Drawing.Size(113, 26);
             this.MtbRetailAmt.TabIndex = 5;
             this.MtbRetailAmt.Text = "5999";
-            this.MtbRetailAmt.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.MtbRetailAmt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.MtbRetailAmt.Leave += new System.EventHandler(this.MtbRetailAmt_Leave);
             // 
             // BtnClear
             // 
             this.BtnClear.BackColor = System.Drawing.Color.White;
-            this.BtnClear.Location = new System.Drawing.Point(789, 182);
+            this.BtnClear.Location = new System.Drawing.Point(789, 275);
             this.BtnClear.Name = "BtnClear";
             this.BtnClear.Size = new System.Drawing.Size(150, 50);
             this.BtnClear.TabIndex = 6;
@@ -382,7 +385,7 @@
             this.GbPurchases.Controls.Add(this.LblPurchAmt);
             this.GbPurchases.Controls.Add(this.LblPurchLoc);
             this.GbPurchases.Controls.Add(this.LblDiscount);
-            this.GbPurchases.Location = new System.Drawing.Point(12, 324);
+            this.GbPurchases.Location = new System.Drawing.Point(12, 385);
             this.GbPurchases.Name = "GbPurchases";
             this.GbPurchases.Size = new System.Drawing.Size(927, 95);
             this.GbPurchases.TabIndex = 2;
@@ -403,6 +406,8 @@
             // 
             // GbGenDetails
             // 
+            this.GbGenDetails.Controls.Add(this.LblGenre);
+            this.GbGenDetails.Controls.Add(this.CmbGenre);
             this.GbGenDetails.Controls.Add(this.LlRatings);
             this.GbGenDetails.Controls.Add(this.CmbRating);
             this.GbGenDetails.Controls.Add(this.LblTitle);
@@ -415,15 +420,46 @@
             this.GbGenDetails.Controls.Add(this.LblRetailAmt);
             this.GbGenDetails.Location = new System.Drawing.Point(12, 98);
             this.GbGenDetails.Name = "GbGenDetails";
-            this.GbGenDetails.Size = new System.Drawing.Size(771, 217);
+            this.GbGenDetails.Size = new System.Drawing.Size(771, 276);
             this.GbGenDetails.TabIndex = 1;
             this.GbGenDetails.TabStop = false;
             this.GbGenDetails.Text = "General Details";
             // 
+            // LblGenre
+            // 
+            this.LblGenre.AutoSize = true;
+            this.LblGenre.Location = new System.Drawing.Point(507, 22);
+            this.LblGenre.Name = "LblGenre";
+            this.LblGenre.Size = new System.Drawing.Size(58, 20);
+            this.LblGenre.TabIndex = 11;
+            this.LblGenre.Text = "Genre:";
+            // 
+            // CmbGenre
+            // 
+            this.CmbGenre.FormattingEnabled = true;
+            this.CmbGenre.Items.AddRange(new object[] {
+            "Action",
+            "Action-Adventure",
+            "Adventure",
+            "Fighting",
+            "MMORPG - Massive Multiplayer Online Role Playing Game",
+            "MOBA - Massive Online Battle Arena",
+            "Platformer",
+            "RPG - Role-Playing Game",
+            "Shooter",
+            "Simulation",
+            "Sports",
+            "Strategy"});
+            this.CmbGenre.Location = new System.Drawing.Point(511, 45);
+            this.CmbGenre.Name = "CmbGenre";
+            this.CmbGenre.Size = new System.Drawing.Size(256, 28);
+            this.CmbGenre.TabIndex = 10;
+            this.CmbGenre.Text = "Action-Adventure";
+            // 
             // LlRatings
             // 
             this.LlRatings.AutoSize = true;
-            this.LlRatings.Location = new System.Drawing.Point(507, 136);
+            this.LlRatings.Location = new System.Drawing.Point(507, 142);
             this.LlRatings.Name = "LlRatings";
             this.LlRatings.Size = new System.Drawing.Size(109, 20);
             this.LlRatings.TabIndex = 6;
@@ -441,9 +477,9 @@
             "M - Mature 17+",
             "AO - Adult Only 18+",
             "RP - Rating Pending"});
-            this.CmbRating.Location = new System.Drawing.Point(511, 159);
+            this.CmbRating.Location = new System.Drawing.Point(511, 165);
             this.CmbRating.Name = "CmbRating";
-            this.CmbRating.Size = new System.Drawing.Size(197, 28);
+            this.CmbRating.Size = new System.Drawing.Size(254, 28);
             this.CmbRating.TabIndex = 7;
             this.CmbRating.Text = "T - Teen";
             // 
@@ -463,7 +499,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(964, 471);
+            this.ClientSize = new System.Drawing.Size(964, 544);
             this.Controls.Add(this.GbSearch);
             this.Controls.Add(this.GbGenDetails);
             this.Controls.Add(this.GbPurchases);
@@ -525,5 +561,7 @@
         private System.Windows.Forms.ComboBox CmbRating;
         private System.Windows.Forms.LinkLabel LlRatings;
         private System.Windows.Forms.GroupBox GbSearch;
+        private System.Windows.Forms.Label LblGenre;
+        private System.Windows.Forms.ComboBox CmbGenre;
     }
 }

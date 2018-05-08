@@ -1,0 +1,5 @@
+﻿CREATE TABLE [dbo].[CollectorTable]
+(
+	[Id] INT NOT NULL PRIMARY KEY IDENTITY, 
+    [USERNAME] TEXT NOT NULL
+)

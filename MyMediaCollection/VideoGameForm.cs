@@ -12,9 +12,14 @@ namespace MyMediaCollection
             InitializeComponent();
         }
 
+        AppUser appUser = new AppUser();
         //ToDo May need a display of found video games to select from
 
-
+        public void LoadWindow(string userName)
+        {
+            appUser.Name = userName;
+        }
+        
         private void BtnExit_Click(object sender, EventArgs e)
         {
             //ToDo need to see if changes made and should be saved
@@ -24,7 +29,7 @@ namespace MyMediaCollection
         private void BtnAdd_Click(object sender, EventArgs e)
         {
             if (TbTitle.Text != "" && CmbPlatform.Text != "")
-            { 
+            {
                 VideoGame game = new VideoGame
                 {
                     Title = TbTitle?.Text,
@@ -34,13 +39,13 @@ namespace MyMediaCollection
                     Platform = CmbPlatform?.Text,
                     PurchDate = DtpPurchDate.Value,
                     PurchLoc = CmbPurchLoc?.Text,
-                    Discount = TbDiscount?.Text.Replace("%",""),
+                    Discount = TbDiscount?.Text.Replace("%", ""),
                     Rating = CmbRating?.Text,
                     Digital = CbDigital.Checked,
                     DateAdded = DateTime.Now,
-                    AddedBy = "Someone"
+                    AddedBy = appUser.Name
                 };
-
+                
                 if (MtbPurchAmt.Text != "$  .")
                 {
                     game.PurchAmt = Convert.ToDecimal(MtbPurchAmt.Text.Replace("$", "").Replace(" ", ""));

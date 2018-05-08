@@ -7,11 +7,22 @@ using System.Threading.Tasks;
 
 namespace MyMediaCollection
 {
-    class AppUser
+    public class AppUser
     {
+        private string name;
         /// <summary>
         /// Name of user adding and editing.
         /// </summary>
-        string Name;
+        public string Name
+        {
+            get
+            {
+                return name;
+            }
+            set
+            {
+                name = value;
+            }
+        }
     }
 }
