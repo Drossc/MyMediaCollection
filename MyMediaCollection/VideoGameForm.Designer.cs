@@ -236,7 +236,7 @@
             this.TbTitle.Name = "TbTitle";
             this.TbTitle.Size = new System.Drawing.Size(474, 26);
             this.TbTitle.TabIndex = 2;
-            this.TbTitle.Text = "Middle-Earth Shadow of Mordor";
+            this.TbTitle.Text = "";
             // 
             // TbUPC
             // 
@@ -244,7 +244,7 @@
             this.TbUPC.Name = "TbUPC";
             this.TbUPC.Size = new System.Drawing.Size(128, 26);
             this.TbUPC.TabIndex = 8;
-            this.TbUPC.Text = "883929319572";
+            this.TbUPC.Text = "";
             // 
             // TbDescription
             // 
@@ -253,7 +253,7 @@
             this.TbDescription.Name = "TbDescription";
             this.TbDescription.Size = new System.Drawing.Size(474, 148);
             this.TbDescription.TabIndex = 3;
-            this.TbDescription.Text = "An Entirely Fresh Open World Experience - Gamespot";
+            this.TbDescription.Text = "";
             // 
             // TbDiscount
             // 
@@ -282,7 +282,7 @@
             this.DtpReleaseDate.Name = "DtpReleaseDate";
             this.DtpReleaseDate.Size = new System.Drawing.Size(137, 26);
             this.DtpReleaseDate.TabIndex = 4;
-            this.DtpReleaseDate.Value = new System.DateTime(2014, 9, 30, 0, 0, 0, 0);
+            this.DtpReleaseDate.Value = new System.DateTime(1901,1,1,0,0,0,0);
             // 
             // DtpPurchDate
             // 
@@ -292,7 +292,7 @@
             this.DtpPurchDate.Name = "DtpPurchDate";
             this.DtpPurchDate.Size = new System.Drawing.Size(150, 26);
             this.DtpPurchDate.TabIndex = 9;
-            this.DtpPurchDate.Value = new System.DateTime(2015, 9, 30, 0, 0, 0, 0);
+            this.DtpPurchDate.Value = new System.DateTime(1901, 1, 1, 0, 0, 0, 0);
             // 
             // MtbPurchAmt
             // 
@@ -301,18 +301,18 @@
             this.MtbPurchAmt.Name = "MtbPurchAmt";
             this.MtbPurchAmt.Size = new System.Drawing.Size(65, 26);
             this.MtbPurchAmt.TabIndex = 10;
-            this.MtbPurchAmt.Text = "1499";
+            this.MtbPurchAmt.Text = "";
             this.MtbPurchAmt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.MtbPurchAmt.Leave += new System.EventHandler(this.MtbPurchAmt_Leave);
             // 
             // MtbRetailAmt
             // 
             this.MtbRetailAmt.Location = new System.Drawing.Point(511, 102);
-            this.MtbRetailAmt.Mask = "$99.00";
+            this.MtbRetailAmt.Mask = "$999.00";
             this.MtbRetailAmt.Name = "MtbRetailAmt";
             this.MtbRetailAmt.Size = new System.Drawing.Size(113, 26);
             this.MtbRetailAmt.TabIndex = 5;
-            this.MtbRetailAmt.Text = "5999";
+            this.MtbRetailAmt.Text = "";
             this.MtbRetailAmt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.MtbRetailAmt.Leave += new System.EventHandler(this.MtbRetailAmt_Leave);
             // 
@@ -343,12 +343,14 @@
             this.CmbPurchLoc.Name = "CmbPurchLoc";
             this.CmbPurchLoc.Size = new System.Drawing.Size(150, 28);
             this.CmbPurchLoc.TabIndex = 11;
-            this.CmbPurchLoc.Text = "Amazon";
+            this.CmbPurchLoc.Text = "";
             // 
             // CmbPlatform
             // 
             this.CmbPlatform.FormattingEnabled = true;
             this.CmbPlatform.Items.AddRange(new object[] {
+            "Gameboy",
+            "Gameboy Color",
             "Nintendo 2DS",
             "Nintendo 3DS",
             "Nintendo Wii",
@@ -358,8 +360,9 @@
             "Playstation 2",
             "Playstation 3",
             "Playstation 4",
-            "NES",
-            "SNES",
+            "Playstation Vita",
+            "Nintendo Entertainment System",
+            "Super Nintendo Entertainment System",
             "Sega Genesis",
             "Xbox",
             "Xbox 360",
@@ -368,7 +371,7 @@
             this.CmbPlatform.Name = "CmbPlatform";
             this.CmbPlatform.Size = new System.Drawing.Size(241, 28);
             this.CmbPlatform.TabIndex = 7;
-            this.CmbPlatform.Text = "Xbox One";
+            this.CmbPlatform.Text = "";
             // 
             // GbPurchases
             // 
@@ -454,7 +457,7 @@
             this.CmbGenre.Name = "CmbGenre";
             this.CmbGenre.Size = new System.Drawing.Size(256, 28);
             this.CmbGenre.TabIndex = 10;
-            this.CmbGenre.Text = "Action-Adventure";
+            this.CmbGenre.Text = "";
             // 
             // LlRatings
             // 
@@ -481,7 +484,7 @@
             this.CmbRating.Name = "CmbRating";
             this.CmbRating.Size = new System.Drawing.Size(254, 28);
             this.CmbRating.TabIndex = 7;
-            this.CmbRating.Text = "T - Teen";
+            this.CmbRating.Text = "";
             // 
             // GbSearch
             // 
